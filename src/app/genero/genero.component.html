@@ -1,3 +1,31 @@
 <app-header></app-header>
-<p>genero works!</p>
+<div id="containerGenero">
+    <h1>Filmes</h1>
+    <img class="imgCardGenero" src="../../assets/images/theater1.png" alt="Símbolo Teatro">
+    <div id="containerCadastroFilmes">
+        <div id="camposPreencherGenero">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Cadastrar Gênero</mat-label>
+            <input matInput formControlName="tituloFilmes" name="tituloFilmes" placeholder="Gênero"></mat-form-field>
+            <button id="btnSalvar" mat-raised-button color="warn">Salvar</button>
+        </div>
+        <div id="listaFilmesGenero">
+            <div id="filme1">
+                <p class="listaGenero">Terror</p>
+                <button class="btnEditar" mat-raised-button >Editar</button>
+                <button class="btnExcluir" mat-raised-button >Excluir</button>
+            </div>
+            <div id="filme2">
+                <p class="listaGenero">Ação</p>
+                <button class="btnEditar" mat-raised-button >Editar</button>
+                <button class="btnExcluir" mat-raised-button >Excluir</button>
+            </div>
+            <div id="filme3">
+                <p class="listaGenero">Comédia</p>
+                <button class="btnEditar" mat-raised-button >Editar</button>
+                <button class="btnExcluir" mat-raised-button >Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
 <app-footer></app-footer>

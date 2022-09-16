@@ -2,10 +2,10 @@
     <div id="logo">
         <img id="cabecalhoImagem" src="../../assets/images/filmesColor.png" alt="Logo">
         <!-- o código abaixo define o texto do cabeçalho da página -->
-        <p id="txtHeader" *ngIf="router.routerState.snapshot.url == '/home'">Conheça nossa Coletânea</p>
-        <p id="txtHeader" *ngIf="router.routerState.snapshot.url == '/usuarios'">Faça o Cadastro de usuários e  edite, caso necessário<br>Pronto para cadastrar? </p>
-        <p id="txtHeader" *ngIf="router.routerState.snapshot.url == '/filmes'">Cadastre os filmes de sua preferência </p>
-        <p id="txtHeader" *ngIf="router.routerState.snapshot.url == '/genero'">Cadastre os gêneros dos filmes</p>
+        <div><p id="txtHeader" *ngIf="router.routerState.snapshot.url == '/home'">Conheça nossa Coletânea</p></div>
+        <div><p id="txtHeader" *ngIf="router.routerState.snapshot.url == '/usuarios'">Faça o Cadastro de usuários e  edite, caso necessário<br>Pronto para cadastrar? </p></div>
+        <div><p id="txtHeader" *ngIf="router.routerState.snapshot.url == '/filmes'">Cadastre os filmes de sua preferência </p></div>
+        <div><p id="txtHeader" *ngIf="router.routerState.snapshot.url == '/genero'">Cadastre os gêneros dos filmes</p></div>
     </div>
     <nav>
         <a routerLink="../home"> Home </a>

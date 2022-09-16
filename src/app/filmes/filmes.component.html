@@ -1,3 +1,42 @@
 <app-header></app-header>
-<p>filmes works!</p>
+<div id="containerFilmes">
+    <h1>Filmes</h1>
+    <img class="imgCardFilme" src="../../assets/images/cinema1.png" alt="Símbolo Cinema">
+    <div id="containerCadastroFilmes">
+        <div id="camposPreencherFilmes">
+            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Título do Filme</mat-label>
+            <input matInput formControlName="tituloFilmes" name="tituloFilmes" placeholder="Título do Filme"></mat-form-field>
+            <mat-form-field id="escolherGenero" appearance="fill">
+                <mat-label>Gênero</mat-label>
+                <mat-select>
+                  <mat-option value="one">Terror</mat-option>
+                  <mat-option value="two">Ação</mat-option>
+                  <mat-option value="three">Comédia</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button id="btnSalvar" mat-raised-button color="warn">Salvar</button>
+        </div>
+        <div id="listaFilmes">
+            <div id="filme1">
+                <p class="listaNomeFilme">Os Outros</p>
+                <p class="listaGenero">Terror</p>
+                <button class="btnEditar" mat-raised-button >Editar</button>
+                <button class="btnExcluir" mat-raised-button >Excluir</button>
+            </div>
+            <div id="filme2">
+                <p class="listaNomeFilme">Até O Último Homem</p>
+                <p class="listaGenero">Ação</p>
+                <button class="btnEditar" mat-raised-button >Editar</button>
+                <button class="btnExcluir" mat-raised-button >Excluir</button>
+            </div>
+            <div id="filme3">
+                <p class="listaNomeFilme">O Máscara</p>
+                <p class="listaGenero">Comédia</p>
+                <button class="btnEditar" mat-raised-button >Editar</button>
+                <button class="btnExcluir" mat-raised-button >Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
 <app-footer></app-footer>
