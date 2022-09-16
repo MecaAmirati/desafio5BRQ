@@ -1,0 +1,30 @@
+
+#containerHeader{
+    background-color: #9BD2DE;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    // justify-content: center;
+    height: 200px;
+}
+
+#logo{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo p{
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+#cabecalhoImagem{
+    height: 60px;
+    width: 175px;
+}
+
+a{
+    color: #4B2142;
+    margin-left: 45px;
+    font-size: 18px;
+}

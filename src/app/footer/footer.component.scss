@@ -1,0 +1,36 @@
+#containerFooter{
+    background-color: var(--laranja);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+}
+
+#esqFooter{
+    flex-wrap: wrap;
+    width: 445px;
+    height: 200px;
+}
+
+#rodapeImagem{
+    height: 60px;
+    width: 180px;
+    margin-right: 45px;
+    margin-top: 25px;
+    margin-left: 223px;
+}
+
+#dirFooter{
+    height: 200px;
+    width: 445px;
+    flex-wrap: wrap;
+    border-left: 1px solid white;
+}
+
+#dirFooter p{
+    margin-top: 25px;
+    margin-left: 45px;
+}

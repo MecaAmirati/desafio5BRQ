@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div id="containerUsuarios">
+    <h1>Cadastro</h1>
+    <div id="containerDados">
+        <div id="camposPreencher">
+            <p>
+                <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Nome</mat-label>
+                <input matInput formControlName="nome" name="nome" placeholder="Digite seu nome"></mat-form-field>
+            </p>
+            <p>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" name="email" placeholder="exemplo@mail.com">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Telefone</mat-label>
+                <span matPrefix>+11 &nbsp;</span>
+                <input type="tel" matInput placeholder="9-9999-9999">
+                </mat-form-field>
+            </p>
+        </div>
+
+        <button id="btnCadastro" mat-raised-button color="warn">Cadastrar</button>
+        <div id="lista">
+            <div id="item1">
+                <p class="listaNome">Paulo Andre</p>
+                <p class="listaEmail">paulo@email.com</p>
+                <p class="listaNumero">3349 6788</p>
+                <button class="btnEditar" mat-raised-button >Editar</button>
+                <button class="btnExcluir" mat-raised-button >Excluir</button>
+            </div>
+            <div id="item2">
+                <p class="listaNome">Marcos Lucio</p>
+                <p class="listaEmail">marcos@email.com</p>
+                <p class="listaNumero">3349 6788</p>
+                <button class="btnEditar" mat-raised-button >Editar</button>
+                <button class="btnExcluir" mat-raised-button >Excluir</button>
+            </div>
+            <div id="item3">
+                <p class="listaNome">Laura Port</p>
+                <p class="listaEmail">laura@email.com</p>
+                <p class="listaNumero">3349 6788</p>
+                <button class="btnEditar" mat-raised-button >Editar</button>
+                <button class="btnExcluir" mat-raised-button >Excluir</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
