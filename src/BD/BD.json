@@ -1,0 +1,66 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Amirati",
+      "email": "amirati@email.com",
+      "telefone": "999999999"
+    },
+    {
+      "id": 2,
+      "nome": "Math",
+      "email": "math@email.com",
+      "telefone": "999999999"
+    }
+  ],
+  "filmes": [
+    {
+      "id": 1,
+      "filme": "John Wick ",
+      "genero": "Ação"
+    },
+    {
+      "id": 2,
+      "filme": "Cabin in the Woods",
+      "genero": "Terror"
+    },
+    {
+      "id": 3,
+      "filme": "A Vida é Bela",
+      "genero": "Drama"
+    },
+    {
+      "id": 4,
+      "filme": "The RIng",
+      "genero": "Terror"
+    },
+    {
+      "id": 5,
+      "filme": "Eu, eu mesmo & Irene",
+      "genero": "Comédia"
+    },
+    {
+      "id": 6,
+      "filme": "The Aneus",
+      "genero": "Drama"
+    }
+  ],
+  "genero": [
+    {
+      "id": 1,
+      "genero": "Ação"
+    },
+    {
+      "id": 2,
+      "genero": "Terror"
+    },
+    {
+      "id": 3,
+      "genero": "Drama"
+    },
+    {
+      "id": 4,
+      "genero": "Comédia"
+    }
+  ]
+}

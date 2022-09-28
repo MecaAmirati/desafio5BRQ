@@ -3,14 +3,19 @@
     <h1>Filmes</h1>
     <img class="imgCardGenero" src="../../assets/images/theater1.png" alt="Símbolo Teatro">
     <div id="containerCadastroFilmes">
-        <div id="camposPreencherGenero">
+        <form [formGroup]="formGenero" id="camposPreencherGenero">
             <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Cadastrar Gênero</mat-label>
             <input matInput formControlName="tituloFilmes" name="tituloFilmes" placeholder="Gênero"></mat-form-field>
-            <button id="btnSalvar" mat-raised-button color="warn">Salvar</button>
-        </div>
+            <button id="btnSalvar" mat-raised-button color="warn" (click)="salvarGenero()">Salvar</button>
+        </form>
         <div id="listaFilmesGenero">
-            <div id="filme1">
+            <div *ngFor="let element of listaGenero" id="filme1">
+                <p class="listaGenero">{{element.genero}}</p>
+                <button class="btnEditar" mat-raised-button (click)="editarGenero(element)">Editar</button>
+                <button class="btnExcluir" mat-raised-button (click)="excluirGenero(element.id)">Excluir</button>
+            </div>
+            <!-- <div id="filme1">
                 <p class="listaGenero">Terror</p>
                 <button class="btnEditar" mat-raised-button >Editar</button>
                 <button class="btnExcluir" mat-raised-button >Excluir</button>
@@ -24,7 +29,7 @@
                 <p class="listaGenero">Comédia</p>
                 <button class="btnEditar" mat-raised-button >Editar</button>
                 <button class="btnExcluir" mat-raised-button >Excluir</button>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

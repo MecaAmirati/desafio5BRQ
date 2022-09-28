@@ -1,40 +1,43 @@
 import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
 import { FilmesComponent } from './filmes/filmes.component';
 import { GeneroComponent } from './genero/genero.component';
+import { MatSelectModule } from '@angular/material/select';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     HomeComponent,
-    UsuariosComponent,
+    HeaderComponent,
     FilmesComponent,
-    GeneroComponent
+    GeneroComponent,
+    FooterComponent,
+    UsuariosComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
     MatCardModule,
+    BrowserModule,
     MatInputModule,
+    MatSelectModule,
     MatButtonModule,
+    HttpClientModule,
+    AppRoutingModule,
     MatFormFieldModule,
-    MatSelectModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
