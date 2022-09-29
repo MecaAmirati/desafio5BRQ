@@ -23,7 +23,6 @@ export class GeneroComponent implements OnInit {
   constructor(
     private httpClient:HttpClient,
     private formBuilder:FormBuilder,
-
     ) { }
 
   get generos(){
@@ -61,6 +60,7 @@ export class GeneroComponent implements OnInit {
         
       }
     })
+
     this.formGenero = this.formBuilder.group({
       tituloFilmes: new FormControl('', [Validators.required])
     })
@@ -99,6 +99,7 @@ export class GeneroComponent implements OnInit {
     )
   }
 
+  // Função do botão Salvar que salva um NOVO (caso ID não exista) ou EDITA (caso ID já exista) o que já existe
   salvarGenero(){
     if (this.generoId > 0 ) {
       this.updateGenero()

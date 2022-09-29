@@ -20,6 +20,7 @@ interface generoInterface{
   templateUrl: './filmes.component.html',
   styleUrls: ['./filmes.component.scss']
 })
+
 export class FilmesComponent implements OnInit {
   private url="http://localhost:3000/filmes"
   private url_2="http://localhost:3000/genero"
@@ -64,6 +65,7 @@ export class FilmesComponent implements OnInit {
         
       }
     })
+    
     this.formFilme = this.formBuilder.group({
       tituloFilmes: new FormControl('', [Validators.required]), selectGenero: new FormControl ('', [Validators.required])
     })
@@ -78,7 +80,6 @@ export class FilmesComponent implements OnInit {
         
       }
     })
-
   }
 
   lerFilmes(): Observable<filmeInterface[]>{
@@ -124,6 +125,7 @@ export class FilmesComponent implements OnInit {
     )
   }
 
+  // Função do botão Salvar que salva um NOVO (caso ID não exista) ou EDITA (caso ID já exista) o que já existe
   salvarFilme(){
     if (this.filmeId > 0 ) {
       this.updateFilme()

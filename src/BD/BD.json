@@ -5,6 +5,12 @@
       "nome": "Amirati",
       "email": "amirati@email.com",
       "tel": "9999999999"
+    },
+    {
+      "id": 2,
+      "nome": "Teste 1",
+      "email": "teste1@mail.com",
+      "tel": "1111111111"
     }
   ],
   "filmes": [
@@ -27,6 +33,11 @@
       "id": 5,
       "filme": "Eu, Eu mesmo & Irene",
       "genero": "Comédia"
+    },
+    {
+      "id": 6,
+      "filme": "Qwerty",
+      "genero": "Qwerty"
     }
   ],
   "genero": [
@@ -45,6 +56,10 @@
     {
       "id": 4,
       "genero": "Comédia"
+    },
+    {
+      "id": 5,
+      "genero": "Qwerty"
     }
   ]
 }

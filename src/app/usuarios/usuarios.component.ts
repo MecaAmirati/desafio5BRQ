@@ -15,6 +15,7 @@ interface usuarioInterface{
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.scss']
 })
+
 export class UsuariosComponent implements OnInit {
   private url="http://localhost:3000/usuario"
   public formUsuario!:FormGroup;
@@ -45,7 +46,6 @@ export class UsuariosComponent implements OnInit {
   editarUsuarioAPI(objetoUsuario:usuarioInterface){
     return this.httpClient.put<usuarioInterface>(`${this.url}/${objetoUsuario.id}`, objetoUsuario)
   }
-
 
   ngOnInit(): void {
     this.lerUsuarios().subscribe({
@@ -115,6 +115,7 @@ export class UsuariosComponent implements OnInit {
     )
   }
 
+  // Função do botão Salvar que salva um NOVO (caso ID não exista) ou EDITA (caso ID já exista) o que já existe
   salvarUsuario(){
     if (this.usuarioId > 0 ) {
       this.updateUsuario()
@@ -131,7 +132,7 @@ export class UsuariosComponent implements OnInit {
           this.ngOnInit()
         },
         error:()=>{
-          console.log("Erro de importação de filme");
+          console.log("Erro de importação de usuário");
         }
       })
     }
