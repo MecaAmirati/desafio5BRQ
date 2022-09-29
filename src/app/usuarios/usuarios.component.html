@@ -2,7 +2,7 @@
 <div id="containerUsuarios">
     <h1>Cadastro</h1>
     <div id="containerDados">
-        <div id="camposPreencher">
+        <form [formGroup]="formUsuario" id="camposPreencher">
             <p>
                 <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Nome</mat-label>
@@ -18,21 +18,21 @@
                 <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Telefone</mat-label>
                 <span matPrefix>+55 &nbsp;</span>
-                <input type="tel" matInput placeholder="(11)9-9999-9999">
+                <input formControlName="tel" type="tel" matInput placeholder="(11)9-9999-9999">
                 </mat-form-field>
             </p>
-        </div>
+        </form>
 
-        <button id="btnCadastro" mat-raised-button color="warn">Cadastrar</button>
-        <div id="lista">
+        <button (click) = 'salvarUsuario()' id="btnCadastro" mat-raised-button color="warn">Cadastrar</button>
+        <div *ngFor="let element of listaUsuario" id="lista">
             <div id="item1">
-                <p class="listaNome">Paulo Andre</p>
-                <p class="listaEmail">paulo@email.com</p>
-                <p class="listaNumero">3349 6788</p>
-                <button class="btnEditar" mat-raised-button >Editar</button>
-                <button class="btnExcluir" mat-raised-button >Excluir</button>
+                <p class="listaNome">{{element.nome}}</p>
+                <p class="listaEmail">{{element.email}}</p>
+                <p class="listaNumero">{{element.tel}}</p>
+                <button class="btnEditar" mat-raised-button (click)="editarUsuario(element)" >Editar</button>
+                <button class="btnExcluir" mat-raised-button (click)="excluirUsuario(element.id)" >Excluir</button>
             </div>
-            <div id="item2">
+            <!-- <div id="item2">
                 <p class="listaNome">Marcos Lucio</p>
                 <p class="listaEmail">marcos@email.com</p>
                 <p class="listaNumero">3349 6788</p>
@@ -45,7 +45,7 @@
                 <p class="listaNumero">3349 6788</p>
                 <button class="btnEditar" mat-raised-button >Editar</button>
                 <button class="btnExcluir" mat-raised-button >Excluir</button>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

@@ -41,10 +41,6 @@ export class FilmesComponent implements OnInit {
     this.listaFilme.push(filme)
   }
 
-  lerFilmes(): Observable<filmeInterface[]>{
-    return this.httpClient.get<filmeInterface[]>(this.url)
-  }
-
   salvarFilmeAPI(objetoFilme:filmeInterface):Observable<filmeInterface>{
     return this.httpClient.post<filmeInterface>(this.url, objetoFilme)
   }
@@ -83,6 +79,10 @@ export class FilmesComponent implements OnInit {
       }
     })
 
+  }
+
+  lerFilmes(): Observable<filmeInterface[]>{
+    return this.httpClient.get<filmeInterface[]>(this.url)
   }
 
   lerGeneros(): Observable<generoInterface[]>{

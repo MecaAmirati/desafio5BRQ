@@ -18,6 +18,7 @@ export class GeneroComponent implements OnInit {
   private url="http://localhost:3000/genero"
   public listaGenero:any;
   public formGenero!:FormGroup;
+  public generoId:number = 0
 
   constructor(
     private httpClient:HttpClient,
@@ -78,34 +79,43 @@ export class GeneroComponent implements OnInit {
   }
 
   editarGenero(genero:generoInterface){
-    genero.genero = "teste"
-    this.editarGeneroAPI(genero).subscribe({
-      next:()=>{
-        this.ngOnInit()
-      },
-      error:()=>{
-        console.log("Erro ao editar");
-        
-      }
-    })
-    
+    this.generoId = genero.id
+    const EditGenero = this.formGenero.controls['tituloFilmes'].setValue(genero.genero);
+  }
 
+  updateGenero(){
+    const id = this.generoId
+    const genero = this.formGenero.controls['tituloFilmes'].value
+    const objetoGenero:generoInterface={id:id, genero:genero}
+    this.editarGeneroAPI(objetoGenero).subscribe(
+      {
+        next:()=>{
+          this.generoId = 0
+          this.ngOnInit()
+        },error:()=>{
+          console.log('deu ruim aqui(update)!');
+        }
+      }
+    )
   }
 
   salvarGenero(){
-    const id = (this.listaGenero[(this.listaGenero.length)-1].id) + 1
-    const genero = this.formGenero.controls['tituloFilmes'].value
-    const objetoGenero:generoInterface={id:id, genero:genero}
+    if (this.generoId > 0 ) {
+      this.updateGenero()
+    }
+    else{
+      const id = (this.listaGenero[(this.listaGenero.length)-1].id) + 1
+      const genero = this.formGenero.controls['tituloFilmes'].value
+      const objetoGenero:generoInterface={id:id, genero:genero}
 
-    this.salvarGeneroAPI(objetoGenero).subscribe({
-      next:()=>{
-        this.ngOnInit()
-      },
-      error:()=>{
-        console.log("Erro de importação de gênero");
-        
-      }
-    })
-
+      this.salvarGeneroAPI(objetoGenero).subscribe({
+        next:()=>{
+          this.ngOnInit()
+        },
+        error:()=>{
+          console.log("Erro de importação de gênero");
+        }
+      })
+    }
   }
 }

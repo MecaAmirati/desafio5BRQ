@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div id="containerGenero">
-    <h1>Filmes</h1>
+    <h1>Gêneros</h1>
     <img class="imgCardGenero" src="../../assets/images/theater1.png" alt="Símbolo Teatro">
     <div id="containerCadastroFilmes">
         <form [formGroup]="formGenero" id="camposPreencherGenero">
@@ -15,21 +15,6 @@
                 <button class="btnEditar" mat-raised-button (click)="editarGenero(element)">Editar</button>
                 <button class="btnExcluir" mat-raised-button (click)="excluirGenero(element.id)">Excluir</button>
             </div>
-            <!-- <div id="filme1">
-                <p class="listaGenero">Terror</p>
-                <button class="btnEditar" mat-raised-button >Editar</button>
-                <button class="btnExcluir" mat-raised-button >Excluir</button>
-            </div>
-            <div id="filme2">
-                <p class="listaGenero">Ação</p>
-                <button class="btnEditar" mat-raised-button >Editar</button>
-                <button class="btnExcluir" mat-raised-button >Excluir</button>
-            </div>
-            <div id="filme3">
-                <p class="listaGenero">Comédia</p>
-                <button class="btnEditar" mat-raised-button >Editar</button>
-                <button class="btnExcluir" mat-raised-button >Excluir</button>
-            </div> -->
         </div>
     </div>
 </div>
